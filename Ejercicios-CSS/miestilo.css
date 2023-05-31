@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    font-family: 'Ubuntu';
+    background: linear-gradient(to right,#4CAF50, #5ae5fe);
+}
+div{
+    border: 2px solid #ff3247;
+    margin: 10px;
+    padding: 5px 30px;
+    border-radius: 15px;
+    box-shadow: 10px 12px #ff3247;
+}
+#principal{
+    width: 50px;
+    float: left;
+    border-radius: 50%;
+}
+div.especial h3{
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 10px 5px #999;
+}
