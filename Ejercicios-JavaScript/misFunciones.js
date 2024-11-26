@@ -174,6 +174,52 @@ function dibujarCirCuad(){
     ctx.fill();
 }
 
+function dibujarCuadriculado(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var alturaMax = canvas.height;
+    var anchoMax = canvas.width;
+
+    //Dibujar lineas horizontales
+    ctx.beginPath();
+    for (var i=0; i<alturaMax; ) {
+        ctx.moveTo(0, i);
+        ctx.lineTo(anchoMax, i);
+        ctx.strokeStyle = "#819de7";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath;
+
+    //Dibujar lineas verticales
+    ctx.beginPath();
+    for (var i=0; i<anchoMax; ) {
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, alturaMax);
+        ctx.strokeStyle = "#819de7";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath;
+
+    //Eje X
+    ctx.beginPath();
+    ctx.moveTo(0,alturaMax/2);
+    ctx.lineTo(anchoMax, alturaMax/2);
+    ctx.strokeStyle = "#db0d0d";
+    ctx.stroke();
+    ctx.closePath();
+
+    //Eje Y
+    ctx.beginPath();
+    ctx.moveTo(anchoMax/2,0);
+    ctx.lineTo(anchoMax/2, alturaMax);
+    ctx.strokeStyle = "#db0d0d";
+    ctx.stroke();
+    ctx.closePath();
+
+}
 function dibujarImagen(posX, posY){
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -206,4 +252,28 @@ function animarAuto(){
         x=0;
     }
     x+=dx;
+}
+
+var bandera;
+function dibujar(event){
+    var canvas = document.getElementById("canvasADibujar");
+    var ctx = canvas.getContext("2d");
+
+    var posX = event.clientX;
+    var posY = event.clientY;
+    console.log(posX, posY);
+
+    canvas.onmousedown = function (){bandera = true};
+    canvas.onmouseup = function (){bandera=false};
+
+    if(bandera){
+        ctx.fillRect(posX, posY, 5,5);
+        ctx.fill;
+    }
+}
+function limpiarCanvas(){
+    var canvas = document.getElementById("canvasADibujar");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
 }
