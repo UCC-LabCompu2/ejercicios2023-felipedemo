@@ -162,7 +162,7 @@ function cargarLocalStorage(){
 function dibujarCirCuad(){
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    var xMax = canvas.width
+    var xMax = canvas.width;
     var yMax = canvas.height;
     var margen = 5;
     ctx.fillStyle = "#333899";
@@ -172,4 +172,38 @@ function dibujarCirCuad(){
     ctx.stroke();
     ctx.fillStyle = "#b919dc";
     ctx.fill();
+}
+
+function dibujarImagen(posX, posY){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+
+    var img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function (){
+        ctx.drawImage(img, posX, posY)
+    }
+}
+
+x=0;
+dx=2;
+function animarAuto(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+
+    var img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function (){
+        ctx.drawImage(img, x, 100)
+    }
+    if(x > canvas.width){
+        x=0;
+    }
+    x+=dx;
 }

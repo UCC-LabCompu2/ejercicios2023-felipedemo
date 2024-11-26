@@ -20,30 +20,30 @@
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
 <form id="formulario_Suscripcion">
 <p>
-    Nombre: <input type="text" name="nombre" placeholder="Ingrese su nombre">
+    <label for="nombre"> Nombre: <input type="text" name="nombre" placeholder="nombre" id="nombre"> </label>
 </p>
-<p>
-    Apellido: <input type="text" name="apellido" placeholder="Ingrese su apellido">
-</p>
-<p>
-    Sexo:
-    Masculino Femenino
-</p>
-<p>
-    Edad: <input type="number" name="edad">
-</p>
-<p>
-    Email:<input type="">
-</p>
-<p>
-    Usuario:<input type="text" name="usuario">
-</p>
-<p>
-    Password:
-</p>
-<p>
-    Confirmar Password:
-</p>
+    <p>
+        <label for="apellido"> Apellido: <input type="text" name="apellido" placeholder="apellido" id="apellido"> </label>
+    </p>
+    <p>
+        Sexo:  <label for="masculino">Masculino</label> <input type="radio" name="sexo" value="masculino" id="masculino">
+        <label for="femenino">Femenino</label>  <input type="radio" name="sexo" value="femenino" id="femenino">
+    </p>
+    <p>
+        <label for="edad">Edad: <input type="number" name="edad" placeholder="edad" id="edad"> </label>
+    </p>
+    <p>
+        <label for="email">Email: <input type="email" name="email" placeholder="email" id="email"> </label>
+    </p>
+    <p>
+        <label for="usuario">Usuario: <input type="text" name="usuario" placeholder="usuario" id="usuario"></label>
+    <p>
+        <label for="password">Password: <input type="password" name="contraseña" placeholder="password" id="password"> </label>
+    </p>
+    <p>
+        <label for="confirmar">Confirmar Password: <input type="password" name="confirmar_contraseña" placeholder="confirmar" id="confirmar"></label>
+    </p>
+
 <p>
     Tipo de servicio:
     <select>
